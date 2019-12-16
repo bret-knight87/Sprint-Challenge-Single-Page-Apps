@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import CharacterCard from "./CharacterCard";
-import { Container, Row } from "reactstrap";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import CharacterCard from './CharacterCard';
+import { Container, Row } from 'reactstrap';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -11,7 +11,7 @@ export default function CharacterList() {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     axios
-      .get("https://rickandmortyapi.com/api/character/")
+      .get('https://rickandmortyapi.com/api/character/')
       .then(response => {
         const chars = response.data.results;
         console.log(chars);
@@ -25,9 +25,9 @@ export default function CharacterList() {
   return (
     <Container>
       <Row>
-        {charcters.map(person => {
-          return <CharacterCard {...person} key={person.id} />;
-        })}
+        {charcters.map(char => {
+          return <CharacterCard image={char.image} name={char.name} status={char.status} origin={char.origin} />
+        })};
       </Row>
     </Container>
   );

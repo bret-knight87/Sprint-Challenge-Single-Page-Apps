@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Card,
   CardHeader,
@@ -7,17 +7,17 @@ import {
   CardTitle,
   CardText,
   Col,
-} from "reactstrap";
+} from 'reactstrap';
 
-export default function CharacterCard(props) {
+export default function CharacterCard({image, name, status, origin}) {
   return (
-    <Col xs="6" md="4" lg="3">
+    <Col xs='6' md='4' lg='3'>
       <Card style={{background: 'black'}} body outline color='warning' className='m-1'>
-        <CardHeader style={{color: 'white'}}className='text-center'>{props.name}</CardHeader>
+        <CardHeader style={{color: 'white'}}className='text-center'>{name}</CardHeader>
         <CardBody>
-          <CardText style={{fontSize: 15, color: 'white'}}>Status: {props.status}</CardText>
-          <CardText style={{fontSize: 10, color: 'white'}}>Origin: {props.origin.name}</CardText>
-          <CardImg src={props.image} />
+          <CardText style={{fontSize: 15, color: 'white'}}>Status: {status}</CardText>
+          <CardText style={{fontSize: 10, color: 'white'}}>Origin: {origin.name}</CardText>
+          <CardImg src={image} alt='character' />
         </CardBody>
       </Card>
     </Col>

@@ -38,6 +38,10 @@ main {
   margin: 0 auto;
 } */
 
+.welcome-page {
+  height: 50vh;
+}
+
 header h1 {
   text-align: center;
   color: crimson;
@@ -69,4 +73,9 @@ nav {
 .nav-links a:hover {
   font-size: 3rem;
   border-bottom: 1px solid ;
+}
+
+.search {
+  width: 50%;
+  margin-left: 27%;
 }
