@@ -42,3 +42,31 @@ header h1 {
   text-align: center;
   color: crimson;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 32px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: crimson;
+  font-weight: bold;
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  font-size: 3rem;
+  border-bottom: 1px solid ;
+}
